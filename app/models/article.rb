@@ -71,6 +71,7 @@ class Article < Content
     end
   end
 
+
   def set_permalink
     return if self.state == 'draft'
     self.permalink = self.title.to_permalink if self.permalink.nil? or self.permalink.empty?
@@ -402,6 +403,24 @@ class Article < Content
 
   def password_protected?
     not password.blank?
+  end
+
+  def assoc_comments
+    Comment.find_by_article_id(self.id)
+  end
+
+  def merge(target_index)
+    @current_article = Article.find(self.id)
+    @merge_article = Article.find(target_index)
+    @current_article.body += "#{@merge_article.body}"
+    @current_article.save!
+    @comments = Comment.find_all_by_article_id(target_index)
+    @comments.each do |comment|
+      comment.article_id = self.id
+      comment.save!
+    end
+    @merge_article.destroy
+    return true
   end
 
   def add_comment(params)

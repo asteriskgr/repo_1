@@ -1,0 +1,7 @@
+<h4> <%= _("Merge Articles") %> </h4>
+  <%= form_for(@article, :url => {:action=>"merge"}, :HTML=>{:method=>"get"}) do %>
+    <label for="merge_input">Article ID<label>
+    <input type="text" name="merge_with" id="merge_input" value="">
+    <%= hidden_field_tag 'current', @article.id %>
+    <%= submit_tag "Merge" %>
+  <% end %>
