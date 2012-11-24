@@ -27,19 +27,7 @@ class Admin::ContentController < Admin::BaseController
     new_or_edit
   end
 
-  def merge
-    @target = params[:merge_with]
-    @article = Article.find(params[:current])
-    if @article.merge(@target)
-      flash[:notice] = "Merge successful"
-    else
-      flash[:warn] = "Merge failed"
-    end
-    redirect_to :action => 'index'
-  end
-
   def edit
-    @admin_check = Profile.find(current_user.profile_id).label == "admin"
     @article = Article.find(params[:id])
     unless @article.access_by? current_user
       redirect_to :action => 'index'
@@ -47,6 +35,26 @@ class Admin::ContentController < Admin::BaseController
       return
     end
     new_or_edit
+  end
+
+  def merge
+    @article = Article.find(params[:id])
+# TIDY UP and DRY UP AFTER DONE!..
+# params[:article] = @article
+# unless params[:merge_with].empty?
+# @article = Article.find(params[:id])
+# params[:article] = @article
+# @article = Article.merge_with(params['merge_with'])
+# @article.save == false
+# @article.merge_with(params['merge_with'])
+# redirect_to "http://www.google.com"
+# flash[:notice] = _("Article was successfully merged. #{params[:action]}, #{params[:id]}")
+# return
+# end
+# params[:id]
+    @article_merged = Article.merge_with(@article.id, params[:merge_with])
+    flash[:notice] = _("Article ID: #{params[:id]} was successfully merged with Article ID: #{params[:merge_with]} - #{@article_merged.title}")
+    redirect_to({:controller=>"admin/content", :action=>"edit", :id=>params[:id]})
   end
 
   def destroy
@@ -74,7 +82,7 @@ class Admin::ContentController < Admin::BaseController
   end
 
   def category_add; do_add_or_remove_fu; end
-  alias_method :resource_add,    :category_add
+  alias_method :resource_add, :category_add
   alias_method :resource_remove, :category_add
 
   def attachment_box_add
@@ -89,7 +97,7 @@ class Admin::ContentController < Admin::BaseController
 
   def attachment_save(attachment)
     begin
-      Resource.create(:filename => attachment.original_filename, :mime => attachment.content_type.chomp, 
+      Resource.create(:filename => attachment.original_filename, :mime => attachment.content_type.chomp,
                       :created_at => Time.now).write_to_disk(attachment)
     rescue => e
       logger.info(e.message)
@@ -132,8 +140,8 @@ class Admin::ContentController < Admin::BaseController
       parent_id = @article.id
       @article = Article.drafts.child_of(parent_id).first || Article.new
       @article.allow_comments = this_blog.default_allow_comments
-      @article.allow_pings    = this_blog.default_allow_pings
-      @article.parent_id      = parent_id
+      @article.allow_pings = this_blog.default_allow_pings
+      @article.parent_id = parent_id
     end
   end
 
@@ -158,6 +166,7 @@ class Admin::ContentController < Admin::BaseController
     @article.text_filter = current_user.text_filter if current_user.simple_editor?
 
     @post_types = PostType.find(:all)
+#debugger
     if request.post?
       if params[:article][:draft]
         get_fresh_or_existing_draft_for_article
@@ -213,7 +222,7 @@ class Admin::ContentController < Admin::BaseController
   def set_article_author
     return if @article.author
     @article.author = current_user.login
-    @article.user   = current_user
+    @article.user = current_user
   end
 
   def set_article_title_for_autosave
@@ -252,4 +261,8 @@ class Admin::ContentController < Admin::BaseController
   def setup_resources
     @resources = Resource.by_created_at
   end
+
 end
+
+
+
