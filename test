@@ -1,0 +1,706 @@
+Script started on Tue 16 Oct 2012 03:29:26 AM PDT
+saasbook@saasbook:~/typo$ console test
+The program 'console' is currently not installed.  You can install it by typing:
+sudo apt-get install conserver-client
+saasbook@saasbook:~/typo$ console teste[Krails consolel[Kvi article.rb ls[K[1Pscd models[3Pmodels[4Plscd appl[Kcd ap[3Pls[1Pevi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce[Klscd apl[Kcd app[4Plsmodelscd modelss[Klsvi article.rb l[Krails consolee[Kconsole test[Krake cucumber > output
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ ls[K[Krake cucumber > output
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 87L, 4908C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[33;1H[33m 33 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 34 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 35 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 36 [0m[1m[34m$[0m
+[33m 37 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 38 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 39 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 40 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 41 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 42 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 43 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 44 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                    1,1            Top[1;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H8[8;5H[34h[?25h[?25l[47;91H9,0-1[9;5H[34h[?25h[?25l[47;91H10,1 [10;5H[34h[?25h[?25l[47;92H1[11;5H[34h[?25h[?25l[47;92H2[12;5H[34h[?25h[?25l[47;92H3[13;5H[34h[?25h[?25l[47;92H4,0-1[14;5H[34h[?25h[?25l[47;92H5,1  [15;5H[34h[?25h[?25l[47;92H6[16;5H[34h[?25h[?25l[47;92H7[17;5H[34h[?25h[?25l[47;92H8[18;5H[34h[?25h[?25l[47;92H9[19;5H[34h[?25h[?25l[47;91H20,0-1[20;5H[34h[?25h[?25l[47;92H1,1  [21;5H[34h[?25h[?25l[47;92H2[22;5H[34h[?25h[?25l[47;92H3[23;5H[34h[?25h[?25l[0m[48;1H[K[48;1H:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ j[Kvi output
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 87L, 4908C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[33;1H[33m 33 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 34 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 35 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 36 [0m[1m[34m$[0m
+[33m 37 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 38 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 39 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 40 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 41 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 42 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 43 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 44 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                    1,1            Top[1;5H[34h[?25h[?25l[0m[48;1H[K[48;1H:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ vi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 95L, 5554C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m      Validation failed: Password is too short (minimum is 5 characters), Login can't be blank, Login i[1m[34m>[0m[33;1H[33m 33 [0m      ./features/step_definitions/article_steps.rb:3:in `block (2 levels) in <top (required)>'[1m[34m$[0m
+[33m 34 [0m      ./features/step_definitions/article_steps.rb:2:in `each'[1m[34m$[0m
+[33m 35 [0m      ./features/step_definitions/article_steps.rb:2:in `/the following users exist/'[1m[34m$[0m
+[33m 36 [0m      features/merge_articles.feature:8:in `Given the following users exist:'[1m[34m$[0m
+[33m 37 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[38;1H[33m 38 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 39 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 40 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 41 [0m[1m[34m$[0m
+[33m 42 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 43 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 44 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 45 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 46 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[1m[7moutput                                                                                    1,1            Top[1;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H8[8;5H[34h[?25h[?25l[47;91H9,0-1[9;5H[34h[?25h[?25l[47;91H10,1 [10;5H[34h[?25h[?25l[47;91H9,0-1[9;5H[34h[?25h[?25l[47;91H8,1  [8;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[0m[48;1H[K[48;1H:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ lsvi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 87L, 4907C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[33;1H[33m 33 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 34 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 35 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 36 [0m[1m[34m$[0m
+[33m 37 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 38 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 39 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 40 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 41 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 42 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 43 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 44 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                    1,1            Top[1;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H8[8;5H[34h[?25h[?25l[47;91H9,0-1[9;5H[34h[?25h[?25l[47;91H8,1  [8;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[47;91H1[1;5H[34h[?25h[?25l[0m[48;1H[K[48;1H:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ vi count[K[K[K[K[Koutput
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 87L, 4907C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[33;1H[33m 33 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 34 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 35 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 36 [0m[1m[34m$[0m
+[33m 37 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 38 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 39 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 40 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 41 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 42 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 43 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 44 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                    1,1            Top[1;5H[34h[?25h[?25l[47;91H2[2;5H[34h[?25h[?25l[47;91H3[3;5H[34h[?25h[?25l[47;91H4[4;5H[34h[?25h[?25l[47;91H5[5;5H[34h[?25h[?25l[47;91H6[6;5H[34h[?25h[?25l[47;91H7[7;5H[34h[?25h[?25l[47;91H8[8;5H[34h[?25h[?25l[47;91H9,0-1[9;5H[34h[?25h[?25l[47;91H10,1 [10;5H[34h[?25h[?25l[47;92H1[11;5H[34h[?25h[?25l[23m[24m[0m[H[J[1;1H[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[33m 47 [0m[1m[34m$[0m
+[33m 48 [0m  Scenario: Merged article should have one author (from either of original) # features/merge_articles.f[1m[34m>[0m[5;1H[33m 49 [0m[1m[34m$[0m
+[33m 50 [0m  Scenario: Merged article should have the comments from both the originals # features/merge_articles.f[1m[34m>[0m[7;1H[33m 51 [0m[1m[34m$[0m
+[33m 52 [0m  Scenario: Merged article should have on title (from either of original) # features/merge_articles.fea[1m[34m>[0m[9;1H[33m 53 [0m[1m[34m$[0m
+[33m 54 [0mFeature: Write Articles[1m[34m$[0m
+[33m 55 [0m  As a blog administrator[1m[34m$[0m
+[33m 56 [0m  In order to share my thoughts with the world[1m[34m$[0m
+[33m 57 [0m  I want to be able to add articles to my blog[1m[34m$[0m
+[33m 58 [0m[1m[34m$[0m
+[33m 59 [0m  Background:[27C # features/write_article.feature:6[1m[34m$[0m
+[33m 60 [0m    Given the blog is set up[12C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 61 [0m    And I am logged into the admin panel # features/step_definitions/web_steps.rb:46[1m[34m$[0m
+[33m 62 [0m[1m[34m$[0m
+[33m 63 [0m  Scenario: Successfully write articles[33C # features/write_article.featu[1m[34m>[0m[20;1H[33m 64 [0m    Given I am on the new article page[34C # features/step_definitions/we[1m[34m>[0m[21;1H[33m 65 [0m    When I fill in "article_title" with "Foobar"[24C # features/step_definitions/we[1m[34m>[0m[22;1H[33m 66 [0m    And I fill in "article__body_and_extended_editor" with "Lorem Ipsum" # features/step_definitions/we[1m[34m>[0m[23;1H[33m 67 [0m    And I press "Publish"[47C # features/step_definitions/we[1m[34m>[0m[24;1H[33m 68 [0m    Then I should be on the admin content page[26C # features/step_definitions/we[1m[34m>[0m[25;1H[33m 69 [0m    When I go to the home page[42C # features/step_definitions/we[1m[34m>[0m[26;1H[33m 70 [0m    Then I should see "Foobar"[42C # features/step_definitions/we[1m[34m>[0m[27;1H[33m 71 [0m    When I follow "Foobar"[46C # features/step_definitions/we[1m[34m>[0m[28;1H[33m 72 [0m    Then I should see "Lorem Ipsum"[37C # features/step_definitions/we[1m[34m>[0m[29;1H[33m 73 [0m[1m[34m$[0m
+[33m 74 [0m8 scenarios (1 undefined, 7 passed)[1m[34m$[0m
+[33m 75 [0m31 steps (1 skipped, 2 undefined, 28 passed)[1m[34m$[0m
+[33m 76 [0m0m5.747s[1m[34m$[0m
+[33m 77 [0m[1m[34m$[0m
+[33m 78 [0mYou can implement step definitions for undefined steps with these snippets:[1m[34m$[0m
+[33m 79 [0m[1m[34m$[0m
+[33m 80 [0mGiven /^I am not an admin$/ do[1m[34m$[0m
+[33m 81 [0m  pending # express the regexp above with the code you wish you had[1m[34m$[0m
+[33m 82 [0mend[1m[34m$[0m
+[33m 83 [0m[1m[34m$[0m
+[33m 84 [0mThen /^I should not see the merge articles form$/ do[1m[34m$[0m
+[33m 85 [0m  pending # express the regexp above with the code you wish you had[1m[34m$[0m
+[33m 86 [0mend[1m[34m$[0m
+[33m 87 [0m[1m[34m$
+~                                                                                                           [45;1H~                                                                                                           [46;1H~                                                                                                           [0m[47;1H[1m[7moutput                                                                                    45,0-1         Bot[1;5H[34h[?25h[?25l[47;92H6,1  [2;5H[34h[?25h[?25l[47;92H7,0-1[3;5H[34h[?25h[?25l[47;92H8,1  [4;5H[34h[?25h[?25l[47;92H9,0-1[5;5H[34h[?25h[?25l[47;91H50,1  [6;5H[34h[?25h[?25l[47;92H1,0-1[7;5H[34h[?25h[?25l[47;92H2,1  [8;5H[34h[?25h[?25l[47;92H3,0-1[9;5H[34h[?25h[?25l[47;92H4,1  [10;5H[34h[?25h[?25l[47;92H5[11;5H[34h[?25h[?25l[47;92H6[12;5H[34h[?25h[?25l[47;92H7[13;5H[34h[?25h[?25l[47;92H8,0-1[14;5H[34h[?25h[?25l[47;92H9,1  [15;5H[34h[?25h[?25l[47;91H60[16;5H[34h[?25h[?25l[47;92H1[17;5H[34h[?25h[?25l[47;92H2,0-1[18;5H[34h[?25h[?25l[47;92H3,1  [19;5H[34h[?25h[?25l[47;92H4[20;5H[34h[?25h[?25l[47;92H5[21;5H[34h[?25h[?25l[47;92H6[22;5H[34h[?25h[?25l[47;92H7[23;5H[34h[?25h[?25l[47;92H8[24;5H[34h[?25h[?25l[47;92H9[25;5H[34h[?25h[?25l[47;91H70[26;5H[34h[?25h[?25l[47;92H1[27;5H[34h[?25h[?25l[47;92H2[28;5H[34h[?25h[?25l[47;92H3,0-1[29;5H[34h[?25h[?25l[47;92H4,1  [30;5H[34h[?25h[?25l[47;92H5[31;5H[34h[?25h[?25l[47;92H6[32;5H[34h[?25h[?25l[47;92H7,0-1[33;5H[34h[?25h[?25l[47;92H8,1  [34;5H[34h[?25h[?25l[47;92H9,0-1[35;5H[34h[?25h[?25l[47;91H80,1  [36;5H[34h[?25h[?25l[47;92H1[37;5H[34h[?25h[?25l[47;92H2[38;5H[34h[?25h[?25l[47;92H3,0-1[39;5H[34h[?25h[?25l[47;92H4,1  [40;5H[34h[?25h[?25l[47;92H5[41;5H[34h[?25h[?25l[47;92H6[42;5H[34h[?25h[?25l[47;92H7,0-1[43;5H[34h[?25h[?25l[23m[24m[0m[H[J[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0m0[1m[34m$[0m
+[33m  3 [0mHIHI[1m[34m$[0m
+[33m  4 [0m0[1m[34m$[0m
+[33m  5 [0mFeature: Create Blog[1m[34m$[0m
+[33m  6 [0m  As an author[1m[34m$[0m
+[33m  7 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  8 [0m  I want to create a blog[1m[34m$[0m
+[33m  9 [0m[1m[34m$[0m
+[33m 10 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m 11 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 12 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 13 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 14 [0m[1m[34m$[0m
+[33m 15 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 16 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 17 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 18 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 19 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 20 [0m[1m[34m$[0m
+[33m 21 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 22 [0m  As an admin[1m[34m$[0m
+[33m 23 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 24 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 25 [0m[1m[34m$[0m
+[33m 26 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 27 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.[1m[34m>[0m[28;1H[33m 28 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 29 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 30 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 31 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 32 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.[1m[34m>[0m[33;1H[33m 33 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 34 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 35 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 36 [0m[1m[34m$[0m
+[33m 37 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 38 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 39 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 40 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 41 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 42 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 43 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 44 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 45 [0m[1m[34m$[0m
+[33m 46 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                    46,3           Top[46;7H[34h[?25h[?25l
+
+[0m:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ jk[K[K[Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ lsvi outputls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;48r[34l[34h[?25h[23m[24m[0m[H[J[?25l[48;1H"output" 84L, 4898C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0mFeature: Create Blog[1m[34m$[0m
+[33m  3 [0m  As an author[1m[34m$[0m
+[33m  4 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  5 [0m  I want to create a blog[1m[34m$[0m
+[33m  6 [0m[1m[34m$[0m
+[33m  7 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m  8 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m  9 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 10 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 11 [0m[1m[34m$[0m
+[33m 12 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 13 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 14 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 15 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 16 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 17 [0m[1m[34m$[0m
+[33m 18 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 19 [0m  As an admin[1m[34m$[0m
+[33m 20 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 21 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 22 [0m[1m[34m$[0m
+[33m 23 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 24 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.rb:1[1m[34m$[0m
+[33m 25 [0m      | login[14C | password | email   | profile_id |[1m[34m$[0m
+[33m 26 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C |[1m[34m$[0m
+[33m 27 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C |[1m[34m$[0m
+[33m 28 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C |[1m[34m$[0m
+[33m 29 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.rb:7[1m[34m$[0m
+[33m 30 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 31 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 32 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 33 [0m[1m[34m$[0m
+[33m 34 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 35 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 36 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 37 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 38 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 39 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 40 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 41 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 42 [0m[1m[34m$[0m
+[33m 43 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[33m 44 [0m[1m[34m$[0m
+[33m 45 [0m  Scenario: Merged article should have one author (from either of original) # features/merge_articles.feature:26[1m[34m$[0m
+[33m 46 [0m[1m[34m$[0m
+[1m[7moutput                                                                                                              1,1            Top[1;5H[34h[?25h[?25l[47;117H2[2;5H[34h[?25h[?25l[47;117H3[3;5H[34h[?25h[?25l[47;117H4[4;5H[34h[?25h[?25l[47;117H5[5;5H[34h[?25h[?25l[47;117H6,0-1[6;5H[34h[?25h[?25l[47;117H7,1  [7;5H[34h[?25h[?25l[47;117H8[8;5H[34h[?25h[?25l[47;117H9[9;5H[34h[?25h[?25l[47;117H8[8;5H[34h[?25h[?25l[47;117H9[9;5H[34h[?25h[?25l[47;117H10,1[10;5H[34h[?25h[?25l[47;118H1,0-1[11;5H[34h[?25h[?25l[47;118H2,1  [12;5H[34h[?25h[?25l[47;118H3[13;5H[34h[?25h[?25l[47;118H4[14;5H[34h[?25h[?25l[47;118H5[15;5H[34h[?25h[?25l[47;118H6[16;5H[34h[?25h[?25l[47;118H7,0-1[17;5H[34h[?25h[?25l[47;118H8,1  [18;5H[34h[?25h[?25l[47;118H9[19;5H[34h[?25h[?25l[47;117H20[20;5H[34h[?25h[?25l[47;118H1[21;5H[34h[?25h[?25l[47;118H2,0-1[22;5H[34h[?25h[?25l[47;118H3,1  [23;5H[34h[?25h[?25l[47;118H4[24;5H[34h[?25h[?25l[47;118H5[25;5H[34h[?25h[?25l[47;118H6[26;5H[34h[?25h[?25l[47;118H7[27;5H[34h[?25h[?25l[47;118H8[28;5H[34h[?25h[?25l[47;118H9[29;5H[34h[?25h[?25l[47;117H30[30;5H[34h[?25h[?25l[47;118H1[31;5H[34h[?25h[?25l[47;118H2[32;5H[34h[?25h[?25l[47;118H3,0-1[33;5H[34h[?25h[?25l[47;118H4,1  [34;5H[34h[?25h[?25l[47;118H5[35;5H[34h[?25h[?25l[47;118H6[36;5H[34h[?25h[?25l[47;118H7[37;5H[34h[?25h[?25l[47;118H8[38;5H[34h[?25h[?25l[47;118H9[39;5H[34h[?25h[?25l[47;117H40[40;5H[34h[?25h[?25l[47;118H1[41;5H[34h[?25h[?25l[47;118H2,0-1[42;5H[34h[?25h[?25l[47;118H3,1  [43;5H[34h[?25h[?25l[47;118H4,0-1[44;5H[34h[?25h[?25l[47;118H5,1  [45;5H[34h[?25h[?25l[47;118H6,0-1[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 47 [0m  Scenario: Merged article should have the comments from both the originals # features/merge_articles.feature:28[1m[34m$[0m[48;1H[K[47;118H[1m[7m7,1  [9C 2%[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 48 [0m[1m[34m$[0m[47;118H[1m[7m8,0-1[10C5[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 49 [0m  Scenario: Merged article should have on title (from either of original) # features/merge_articles.feature:30[1m[34m$[0m[47;118H[1m[7m9,1  [10C7[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 50 [0m[1m[34m$[0m[47;117H[1m[7m50,0-1[9C10[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 51 [0mFeature: Write Articles[1m[34m$[0m[47;118H[1m[7m1,1  [10C3[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 52 [0m  As a blog administrator[1m[34m$[0m[47;118H[1m[7m2[14C5[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 53 [0m  In order to share my thoughts with the world[1m[34m$[0m[47;118H[1m[7m3[14C8[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 54 [0m  I want to be able to add articles to my blog[1m[34m$[0m[47;118H[1m[7m4[13C21[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 55 [0m[1m[34m$[0m[47;118H[1m[7m5,0-1[10C3[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 56 [0m  Background:[27C # features/write_article.feature:6[1m[34m$[0m[47;118H[1m[7m6,1  [10C6[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 57 [0m    Given the blog is set up[12C # features/step_definitions/web_steps.rb:34[1m[34m$[0m[47;118H[1m[7m7[14C8[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 58 [0m    And I am logged into the admin panel # features/step_definitions/web_steps.rb:46[1m[34m$[0m[47;118H[1m[7m8[13C31[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 59 [0m[1m[34m$[0m[47;118H[1m[7m9,0-1[10C4[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 60 [0m  Scenario: Successfully write articles[33C # features/write_article.feature:10[1m[34m$[0m[47;117H[1m[7m60,1  [10C6[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 61 [0m    Given I am on the new article page[34C # features/step_definitions/web_steps.rb:68[1m[34m$[0m[47;118H[1m[7m1[14C9[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 62 [0m    When I fill in "article_title" with "Foobar"[24C # features/step_definitions/web_steps.rb:84[1m[34m$[0m[47;118H[1m[7m2[13C42[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 63 [0m    And I fill in "article__body_and_extended_editor" with "Lorem Ipsum" # features/step_definitions/web_steps.rb:84[1m[34m$[0m[47;118H[1m[7m3[14C4[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 64 [0m    And I press "Publish"[47C # features/step_definitions/web_steps.rb:76[1m[34m$[0m[47;118H[1m[7m4[14C7[46;5H[34h[?25h[?25l[1;46r[0m[46;1H
+[1;48r[46;1H[33m 65 [0m    Then I should be on the admin content page[26C # features/step_definitions/web_steps.rb:254[1m[34m$[0m[47;118H[1m[7m5[13C50[46;5H[34h[?25h[?25l[47;118H4[45;5H[34h[?25h[?25l[47;118H3[44;5H[34h[?25h[?25l[47;118H2[43;5H[34h[?25h[?25l[47;118H1[42;5H[34h[?25h[?25l[47;118H0[41;5H[34h[?25h[?25l[47;117H59,0-1[40;5H[34h[?25h[?25l[47;118H8,1  [39;5H[34h[?25h[?25l[47;118H7[38;5H[34h[?25h[?25l[47;118H6[37;5H[34h[?25h[?25l[47;118H5,0-1[36;5H[34h[?25h[?25l[47;118H4,1  [35;5H[34h[?25h[?25l[47;118H3[34;5H[34h[?25h[?25l[47;118H2[33;5H[34h[?25h[?25l[47;118H1[32;5H[34h[?25h[?25l[47;118H0,0-1[31;5H[34h[?25h[?25l[47;117H49,1  [30;5H[34h[?25h[?25l[47;118H8,0-1[29;5H[34h[?25h[?25l[47;118H7,1  [28;5H[34h[?25h[?25l[47;118H6,0-1[27;5H[34h[?25h[?25l[47;118H5,1  [26;5H[34h[?25h[?25l[47;118H4,0-1[25;5H[34h[?25h[?25l[47;118H3,1  [24;5H[34h[?25h[?25l[47;118H2,0-1[23;5H[34h[?25h[?25l[47;118H1,1  [22;5H[34h[?25h[?25l[47;118H0[21;5H[34h[?25h[?25l[47;117H39[20;5H[34h[?25h[?25l[47;118H8[19;5H[34h[?25h[?25l[47;118H7[18;5H[34h[?25h[?25l[47;118H6[17;5H[34h[?25h[?25l[47;118H5[16;5H[34h[?25h[?25l[47;118H4[15;5H[34h[?25h[?25l[47;118H3,0-1[14;5H[34h[?25h[?25l[47;118H2,1  [13;5H[34h[?25h[?25l[47;118H1[12;5H[34h[?25h[?25l[47;118H0[11;5H[34h[?25h[?25l[47;118H1[12;5H[34h[?25h[?25l[47;118H2[13;5H[34h[?25h[?25l[47;118H3,0-1[14;5H[34h[?25h[?25l[47;118H4,1  [15;5H[34h[?25h[?25l[47;118H5[16;5H[34h[?25h[?25l[47;118H6[17;5H[34h[?25h[?25l[47;118H7[18;5H[34h[?25h[?25l[47;118H8[19;5H[34h[?25h[?25l[47;118H9[20;5H[34h[?25h[?25l[47;117H40[21;5H[34h[?25h[?25l[47;118H1[22;5H[34h[?25h[?25l[47;118H2,0-1[23;5H[34h[?25h[?25l[47;118H3,1  [24;5H[34h[?25h[?25l[47;118H4,0-1[25;5H[34h[?25h[?25l[47;118H5,1  [26;5H[34h[?25h[?25l[47;118H6,0-1[27;5H[34h[?25h[?25l[47;118H7,1  [28;5H[34h[?25h[?25l[47;118H8,0-1[29;5H[34h[?25h[?25l[47;118H9,1  [30;5H[34h[?25h[?25l[47;117H50,0-1[31;5H[34h[?25h[?25l[47;118H1,1  [32;5H[34h[?25h[?25l[47;118H0,0-1[31;5H[34h[?25h[?25l[47;117H49,1  [30;5H[34h[?25h[?25l[47;118H8,0-1[29;5H[34h[?25h[?25l[47;118H7,1  [28;5H[34h[?25h[?25l[47;118H6,0-1[27;5H[34h[?25h[?25l[47;118H5,1  [26;5H[34h[?25h[?25l[47;118H4,0-1[25;5H[34h[?25h[?25l[47;118H3,1  [24;5H[34h[?25h[?25l[47;118H2,0-1[23;5H[34h[?25h[?25l[47;118H1,1  [22;5H[34h[?25h[?25l[47;118H0[21;5H[34h[?25h[?25l[47;117H39[20;5H[34h[?25h[?25l[47;117H40[21;5H[34h[?25h[?25l[47;118H1[22;5H[34h[?25h[?25l[48;1H[0m:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[48;1H[K[48;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ rail scon[K[K[K[K[K[K[K[K[K[Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ -[K[Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ [Ksaasbook@saasbook:~/typo$ lsvi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi outputj[K
+[?1000h[?1049h[?1h=[1;49r[34l[34h[?25h[23m[24m[0m[H[J[?25l[49;1H"output" 84L, 4970C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0mFeature: Create Blog[1m[34m$[0m
+[33m  3 [0m  As an author[1m[34m$[0m
+[33m  4 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  5 [0m  I want to create a blog[1m[34m$[0m
+[33m  6 [0m[1m[34m$[0m
+[33m  7 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m  8 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m  9 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 10 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 11 [0m[1m[34m$[0m
+[33m 12 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 13 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 14 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 15 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 16 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 17 [0m[1m[34m$[0m
+[33m 18 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 19 [0m  As an admin[1m[34m$[0m
+[33m 20 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 21 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 22 [0m[1m[34m$[0m
+[33m 23 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 24 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.rb:1[1m[34m$[0m
+[33m 25 [0m      | login[14C | password | email   | profile_id | name   | state  |[1m[34m$[0m
+[33m 26 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C | gordon | active |[1m[34m$[0m
+[33m 27 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C | john   | active |[1m[34m$[0m
+[33m 28 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C | mary   | active |[1m[34m$[0m
+[33m 29 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.rb:7[1m[34m$[0m
+[33m 30 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 31 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 32 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 33 [0m[1m[34m$[0m
+[33m 34 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 35 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 36 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 37 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 38 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 39 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 40 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 41 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 42 [0m[1m[34m$[0m
+[33m 43 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[33m 44 [0m[1m[34m$[0m
+[33m 45 [0m  Scenario: Merged article should have one author (from either of original) # features/merge_articles.feature:26[1m[34m$[0m
+[33m 46 [0m[1m[34m$[0m
+[33m 47 [0m  Scenario: Merged article should have the comments from both the originals # features/merge_articles.feature:28[1m[34m$[0m
+[1m[7moutput                                                                                                              1,1            Top[1;5H[34h[?25h[?25l[48;117H2[2;5H[34h[?25h[?25l[48;117H3[3;5H[34h[?25h[?25l[48;117H4[4;5H[34h[?25h[?25l[48;117H5[5;5H[34h[?25h[?25l[48;117H6,0-1[6;5H[34h[?25h[?25l[48;117H7,1  [7;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H9[9;5H[34h[?25h[?25l[48;117H10,1[10;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H2,1  [12;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H6[16;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H8,1  [18;5H[34h[?25h[?25l[48;118H9[19;5H[34h[?25h[?25l[48;117H20[20;5H[34h[?25h[?25l[48;118H1[21;5H[34h[?25h[?25l[48;118H2,0-1[22;5H[34h[?25h[?25l[48;118H3,1  [23;5H[34h[?25h[?25l[48;118H4[24;5H[34h[?25h[?25l[48;118H5[25;5H[34h[?25h[?25l[48;118H6[26;5H[34h[?25h[?25l[48;118H7[27;5H[34h[?25h[?25l[48;118H8[28;5H[34h[?25h[?25l[48;118H9[29;5H[34h[?25h[?25l[48;117H30[30;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H2[32;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H0[30;5H[34h[?25h[?25l[48;117H29[29;5H[34h[?25h[?25l[48;118H8[28;5H[34h[?25h[?25l[48;118H7[27;5H[34h[?25h[?25l[48;118H6[26;5H[34h[?25h[?25l[48;118H5[25;5H[34h[?25h[?25l[48;118H4[24;5H[34h[?25h[?25l[48;118H3[23;5H[34h[?25h[?25l[48;118H2,0-1[22;5H[34h[?25h[?25l[48;118H1,1  [21;5H[34h[?25h[?25l[48;118H0[20;5H[34h[?25h[?25l[48;117H19[19;5H[34h[?25h[?25l[48;118H8[18;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H6,1  [16;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H2[12;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H0,1  [10;5H[34h[?25h[?25l[48;117H9,1 [9;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H7[7;5H[34h[?25h[?25l[48;117H6,0-1[6;5H[34h[?25h[?25l[48;117H5,1  [5;5H[34h[?25h[?25l[48;117H4[4;5H[34h[?25h[?25l[48;117H3[3;5H[34h[?25h[?25l[48;117H4[4;5H[34h[?25h[?25l[48;117H5[5;5H[34h[?25h[?25l[48;117H6,0-1[6;5H[34h[?25h[?25l[48;117H7,1  [7;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H9[9;5H[34h[?25h[?25l[48;117H10,1[10;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H2,1  [12;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H6[16;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H8,1  [18;5H[34h[?25h[?25l[48;118H9[19;5H[34h[?25h[?25l[48;118H8[18;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H6,1  [16;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H2[12;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H0,1  [10;5H[34h[?25h[?25l[48;117H9,1 [9;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H7[7;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H9[9;5H[34h[?25h[?25l[48;117H10,1[10;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H2,1  [12;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H6[16;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H8,1  [18;5H[34h[?25h[?25l[48;118H9[19;5H[34h[?25h[?25l[48;117H20[20;5H[34h[?25h[?25l[48;118H1[21;5H[34h[?25h[?25l[48;118H2,0-1[22;5H[34h[?25h[?25l[48;118H3,1  [23;5H[34h[?25h[?25l[48;118H4[24;5H[34h[?25h[?25l[48;118H5[25;5H[34h[?25h[?25l[48;118H6[26;5H[34h[?25h[?25l[48;118H7[27;5H[34h[?25h[?25l[48;118H8[28;5H[34h[?25h[?25l[48;118H9[29;5H[34h[?25h[?25l[48;117H30[30;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H2[32;5H[34h[?25h[?25l[48;118H3,0-1[33;5H[34h[?25h[?25l[48;118H2,1  [32;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H0[30;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H2[32;5H[34h[?25h[?25l[48;118H3,0-1[33;5H[34h[?25h[?25l[48;118H4,1  [34;5H[34h[?25h[?25l[48;118H5[35;5H[34h[?25h[?25l[48;118H6[36;5H[34h[?25h[?25l[48;118H7[37;5H[34h[?25h[?25l[48;118H8[38;5H[34h[?25h[?25l[48;118H9[39;5H[34h[?25h[?25l[48;117H40[40;5H[34h[?25h[?25l[48;118H1[41;5H[34h[?25h[?25l[48;118H2,0-1[42;5H[34h[?25h[?25l[48;118H3,1  [43;5H[34h[?25h[?25l[48;118H2,0-1[42;5H[34h[?25h[?25l[48;118H1,1  [41;5H[34h[?25h[?25l[48;118H0[40;5H[34h[?25h[?25l[48;117H39[39;5H[34h[?25h[?25l[48;118H8[38;5H[34h[?25h[?25l[48;118H7[37;5H[34h[?25h[?25l[48;118H6[36;5H[34h[?25h[?25l[48;118H5[35;5H[34h[?25h[?25l[48;118H4[34;5H[34h[?25h[?25l[48;118H5[35;5H[34h[?25h[?25l[48;118H6[36;5H[34h[?25h[?25l[48;118H7[37;5H[34h[?25h[?25l[48;118H8[38;5H[34h[?25h[?25l[48;118H9[39;5H[34h[?25h[?25l[48;117H40[40;5H[34h[?25h[?25l[48;118H1[41;5H[34h[?25h[?25l[48;118H2,0-1[42;5H[34h[?25h[?25l[48;118H3,1  [43;5H[34h[?25h[?25l[48;118H4,0-1[44;5H[34h[?25h[?25l[48;118H5,1  [45;5H[34h[?25h[?25l[48;118H6,0-1[46;5H[34h[?25h[?25l[48;118H7,1  [47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 48 [0m[1m[34m$[0m[49;1H[K[48;118H[1m[7m8,0-1[9C 2%[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 49 [0m  Scenario: Merged article should have on title (from either of original) # features/merge_articles.feature:30[1m[34m$[0m[48;118H[1m[7m9,1  [10C5[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 50 [0m[1m[34m$[0m[48;117H[1m[7m50,0-1[10C8[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 51 [0mFeature: Write Articles[1m[34m$[0m[48;118H[1m[7m1,1  [9C10[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 52 [0m  As a blog administrator[1m[34m$[0m[48;118H[1m[7m2[14C3[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 53 [0m  In order to share my thoughts with the world[1m[34m$[0m[48;118H[1m[7m3[14C6[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 54 [0m  I want to be able to add articles to my blog[1m[34m$[0m[48;118H[1m[7m4[14C8[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 55 [0m[1m[34m$[0m[48;118H[1m[7m5,0-1[9C21[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 56 [0m  Background:[27C # features/write_article.feature:6[1m[34m$[0m[48;118H[1m[7m6,1  [10C4[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 57 [0m    Given the blog is set up[12C # features/step_definitions/web_steps.rb:34[1m[34m$[0m[48;118H[1m[7m7[14C7[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 58 [0m    And I am logged into the admin panel # features/step_definitions/web_steps.rb:46[1m[34m$[0m[48;118H[1m[7m8[14C9[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 59 [0m[1m[34m$[0m[48;118H[1m[7m9,0-1[9C32[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 60 [0m  Scenario: Successfully write articles[33C # features/write_article.feature:10[1m[34m$[0m[48;117H[1m[7m60,1  [10C5[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 61 [0m    Given I am on the new article page[34C # features/step_definitions/web_steps.rb:68[1m[34m$[0m[48;118H[1m[7m1[14C7[47;5H[34h[?25h[?25l[0m[115C8 When I fill [1m[34m>[0m[48;8H[1m[7m[+][110C17[10C8[47;121H[34h[?25h[?25l
+
+[0m:[34h[?25hq[?25l[34h[?25h[?25l[?1000l
+[32mSave changes to "output"?[0m
+[32m[Y]es, (N)o, (C)ancel: [34h[?25h[?1000h[0m[49;1H[K[49;1H[?1000l
+[?1l>[?1049lsaasbook@saasbook:~/typo$ vi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;49r[34l[34h[?25h[23m[24m[0m[H[J[?25l[49;1H"output" 84L, 4970C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0mFeature: Create Blog[1m[34m$[0m
+[33m  3 [0m  As an author[1m[34m$[0m
+[33m  4 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  5 [0m  I want to create a blog[1m[34m$[0m
+[33m  6 [0m[1m[34m$[0m
+[33m  7 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m  8 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m  9 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 10 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 11 [0m[1m[34m$[0m
+[33m 12 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 13 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 14 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 15 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:147[1m[34m$[0m
+[33m 16 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:129[1m[34m$[0m
+[33m 17 [0m[1m[34m$[0m
+[33m 18 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 19 [0m  As an admin[1m[34m$[0m
+[33m 20 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 21 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 22 [0m[1m[34m$[0m
+[33m 23 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 24 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.rb:1[1m[34m$[0m
+[33m 25 [0m      | login[14C | password | email   | profile_id | name   | state  |[1m[34m$[0m
+[33m 26 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C | gordon | active |[1m[34m$[0m
+[33m 27 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C | john   | active |[1m[34m$[0m
+[33m 28 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C | mary   | active |[1m[34m$[0m
+[33m 29 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.rb:7[1m[34m$[0m
+[33m 30 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 31 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 32 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 33 [0m[1m[34m$[0m
+[33m 34 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 35 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 36 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 37 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 38 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:72[1m[34m$[0m
+[33m 39 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 40 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 41 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 42 [0m[1m[34m$[0m
+[33m 43 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[33m 44 [0m[1m[34m$[0m
+[33m 45 [0m  Scenario: Merged article should have one author (from either of original) # features/merge_articles.feature:26[1m[34m$[0m
+[33m 46 [0m[1m[34m$[0m
+[33m 47 [0m  Scenario: Merged article should have the comments from both the originals # features/merge_articles.feature:28[1m[34m$[0m
+[1m[7moutput                                                                                                              1,1            Top[1;5H[34h[?25h[?25l[48;117H2[2;5H[34h[?25h[?25l[48;117H3[3;5H[34h[?25h[?25l[48;117H4[4;5H[34h[?25h[?25l[48;117H5[5;5H[34h[?25h[?25l[48;117H6,0-1[6;5H[34h[?25h[?25l[48;117H7,1  [7;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H9[9;5H[34h[?25h[?25l[48;117H10,1[10;5H[34h[?25h[?25l[48;118H1,0-1[11;5H[34h[?25h[?25l[48;118H2,1  [12;5H[34h[?25h[?25l[48;118H3[13;5H[34h[?25h[?25l[48;118H4[14;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H6[16;5H[34h[?25h[?25l[48;118H7,0-1[17;5H[34h[?25h[?25l[48;118H8,1  [18;5H[34h[?25h[?25l[48;118H9[19;5H[34h[?25h[?25l[48;117H20[20;5H[34h[?25h[?25l[48;118H1[21;5H[34h[?25h[?25l[48;118H2,0-1[22;5H[34h[?25h[?25l[48;118H3,1  [23;5H[34h[?25h[?25l[48;118H4[24;5H[34h[?25h[?25l[48;118H5[25;5H[34h[?25h[?25l[48;118H6[26;5H[34h[?25h[?25l[48;118H7[27;5H[34h[?25h[?25l[48;118H8[28;5H[34h[?25h[?25l[48;118H9[29;5H[34h[?25h[?25l[48;117H30[30;5H[34h[?25h[?25l[48;118H1[31;5H[34h[?25h[?25l[48;118H2[32;5H[34h[?25h[?25l[48;118H3,0-1[33;5H[34h[?25h[?25l[48;118H4,1  [34;5H[34h[?25h[?25l[48;118H5[35;5H[34h[?25h[?25l[48;118H6[36;5H[34h[?25h[?25l[48;118H7[37;5H[34h[?25h[?25l[48;118H8[38;5H[34h[?25h[?25l[48;118H9[39;5H[34h[?25h[?25l[48;117H40[40;5H[34h[?25h[?25l[48;118H1[41;5H[34h[?25h[?25l[48;118H2,0-1[42;5H[34h[?25h[?25l[48;118H3,1  [43;5H[34h[?25h[?25l[48;118H4,0-1[44;5H[34h[?25h[?25l[48;118H5,1  [45;5H[34h[?25h[?25l[48;118H6,0-1[46;5H[34h[?25h[?25l[48;118H7,1  [47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 48 [0m[1m[34m$[0m[49;1H[K[48;118H[1m[7m8,0-1[9C 2%[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 49 [0m  Scenario: Merged article should have on title (from either of original) # features/merge_articles.feature:30[1m[34m$[0m[48;118H[1m[7m9,1  [10C5[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 50 [0m[1m[34m$[0m[48;117H[1m[7m50,0-1[10C8[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 51 [0mFeature: Write Articles[1m[34m$[0m[48;118H[1m[7m1,1  [9C10[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 52 [0m  As a blog administrator[1m[34m$[0m[48;118H[1m[7m2[14C3[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 53 [0m  In order to share my thoughts with the world[1m[34m$[0m[48;118H[1m[7m3[14C6[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 54 [0m  I want to be able to add articles to my blog[1m[34m$[0m[48;118H[1m[7m4[14C8[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 55 [0m[1m[34m$[0m[48;118H[1m[7m5,0-1[9C21[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 56 [0m  Background:[27C # features/write_article.feature:6[1m[34m$[0m[48;118H[1m[7m6,1  [10C4[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 57 [0m    Given the blog is set up[12C # features/step_definitions/web_steps.rb:34[1m[34m$[0m[48;118H[1m[7m7[14C7[47;5H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 58 [0m    And I am logged into the admin panel # features/step_definitions/web_steps.rb:46[1m[34m$[0m[48;118H[1m[7m8[14C9[47;5H[34h[?25h[?25l
+
+[0m:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[49;1H[K[49;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ ls
+[0m[01;34mapp[0m        [01;34mconfig[0m     [01;34mdb[0m        Gemfile       [01;34mlib[0m          output    README.textile  [01;34mspec[0m    [01;34mtmp[0m
+[01;34mautotest[0m   config.ru  [01;34mdoc[0m       Gemfile.lock  [01;34mlog[0m          [01;34mpublic[0m    rspec.sample    test    TODO.todo
+CHANGELOG  [01;34mcoverage[0m   [01;34mfeatures[0m  [01;34mlang[0m          MIT-LICENSE  Rakefile  [01;34mscript[0m          [01;34mthemes[0m  [01;34mvendor[0m
+saasbook@saasbook:~/typo$ lsvi output[13@rake cucumber >[C[C[C[C[C[C[C
+
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ 
+saasbook@saasbook:~/typo$ vi output
+[?1000h[?1049h[?1h=[1;49r[34l[34h[?25h[23m[24m[0m[H[J[?25l[49;1H"output" 90L, 5064C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$[0m
+[33m  2 [0mFeature: Create Blog[1m[34m$[0m
+[33m  3 [0m  As an author[1m[34m$[0m
+[33m  4 [0m  In order to gift my thoughts to the world[1m[34m$[0m
+[33m  5 [0m  I want to create a blog[1m[34m$[0m
+[33m  6 [0m[1m[34m$[0m
+[33m  7 [0m  Scenario: Create blog page shown      # features/create_blog.feature:6[1m[34m$[0m
+[33m  8 [0m    Given I am on the home page[8C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m  9 [0m      HI[1m[34m$[0m
+[33m 10 [0m      the home page[1m[34m$[0m
+[33m 11 [0m    Then I should see "Welcome"[8C # features/step_definitions/web_steps.rb:131[1m[34m$[0m
+[33m 12 [0m    And I should see "My Shiny Weblog!" # features/step_definitions/web_steps.rb:131[1m[34m$[0m
+[33m 13 [0m[1m[34m$[0m
+[33m 14 [0m  Scenario: Create blog page not shown when blog created # features/create_blog.feature:11[1m[34m$[0m
+[33m 15 [0m    Given the blog is set up[28C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 16 [0m    When I am on the home page[26C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 17 [0m      HI[1m[34m$[0m
+[33m 18 [0m      the home page[1m[34m$[0m
+[33m 19 [0m    Then I should not see "My Shiny Weblog!"[12C # features/step_definitions/web_steps.rb:149[1m[34m$[0m
+[33m 20 [0m    And I should see "Teh Blag"[25C # features/step_definitions/web_steps.rb:131[1m[34m$[0m
+[33m 21 [0m[1m[34m$[0m
+[33m 22 [0mFeature: Merge Articles[1m[34m$[0m
+[33m 23 [0m  As an admin[1m[34m$[0m
+[33m 24 [0m  In order to remove articles on a duplicate topic[1m[34m$[0m
+[33m 25 [0m  I want to be able to merge articles on the same topic[1m[34m$[0m
+[33m 26 [0m[1m[34m$[0m
+[33m 27 [0m  Background: users and articles have been added to database # features/merge_articles.feature:6[1m[34m$[0m
+[33m 28 [0m    Given the following users exist:[24C # features/step_definitions/article_steps.rb:1[1m[34m$[0m
+[33m 29 [0m      | login[14C | password | email   | profile_id | name   | state  |[1m[34m$[0m
+[33m 30 [0m      | admin_gordon[7C | aaaaaa   | a@a.com | 1[9C | gordon | active |[1m[34m$[0m
+[33m 31 [0m      | blog_publisher_john | bbbbbb   | b@b.com | 2[9C | john   | active |[1m[34m$[0m
+[33m 32 [0m      | contributor_mary    | cccccc   | c@c.com | 3[9C | mary   | active |[1m[34m$[0m
+[33m 33 [0m    Given the following articles exist:[21C # features/step_definitions/article_steps.rb:7[1m[34m$[0m
+[33m 34 [0m      | id | title[11C | author[13C |[1m[34m$[0m
+[33m 35 [0m      | 1  | Flying Parakeets | admin_gordon[7C |[1m[34m$[0m
+[33m 36 [0m      | 2  | Flying Pigs      | blog_publisher_john |[1m[34m$[0m
+[33m 37 [0m[1m[34m$[0m
+[33m 38 [0m  Scenario: Cannot merge articles when not admin  # features/merge_articles.feature:19[1m[34m$[0m
+[33m 39 [0m    Given I am not an admin[22C # features/merge_articles.feature:20[1m[34m$[0m
+[33m 40 [0m      Undefined step: "I am not an admin" (Cucumber::Undefined)[1m[34m$[0m
+[33m 41 [0m      features/merge_articles.feature:20:in `Given I am not an admin'[1m[34m$[0m
+[33m 42 [0m    When I go to article's edit page[13C # features/step_definitions/web_steps.rb:74[1m[34m$[0m
+[33m 43 [0m    Then I should not see the merge articles form # features/merge_articles.feature:22[1m[34m$[0m
+[33m 44 [0m      Undefined step: "I should not see the merge articles form" (Cucumber::Undefined)[1m[34m$[0m
+[33m 45 [0m      features/merge_articles.feature:22:in `Then I should not see the merge articles form'[1m[34m$[0m
+[33m 46 [0m[1m[34m$[0m
+[33m 47 [0m  Scenario: Merged article should contain text of both # features/merge_articles.feature:24[1m[34m$[0m
+[1m[7moutput                                                                                                              1,1            Top[1;5H[34h[?25h[?25l[48;117H2[2;5H[34h[?25h[?25l[48;117H3[3;5H[34h[?25h[?25l[48;117H4[4;5H[34h[?25h[?25l[48;117H5[5;5H[34h[?25h[?25l[48;117H6,0-1[6;5H[34h[?25h[?25l[48;117H7,1  [7;5H[34h[?25h[?25l[48;117H8[8;5H[34h[?25h[?25l[48;117H9[9;5H[34h[?25h[?25l[48;117H10,1[10;5H[34h[?25h[?25l[48;118H1[11;5H[34h[?25h[?25l[48;118H2[12;5H[34h[?25h[?25l[48;118H3,0-1[13;5H[34h[?25h[?25l[48;118H4,1  [14;5H[34h[?25h[?25l[48;118H5[15;5H[34h[?25h[?25l[48;118H6[16;5H[34h[?25h[?25l[48;118H7[17;5H[34h[?25h[?25l[48;118H8[18;5H[34h[?25h[?25l[48;118H9[19;5H[34h[?25h[?25l[48;117H20[20;5H[34h[?25h[?25l[48;118H1,0-1[21;5H[34h[?25h[?25l[48;118H2,1  [22;5H[34h[?25h[?25l[48;118H3[23;5H[34h[?25h[?25l[48;118H4[24;5H[34h[?25h[?25l[48;118H5[25;5H[34h[?25h[?25l[48;118H6,0-1[26;5H[34h[?25h[?25l[48;118H7,1  [27;5H[34h[?25h[?25l[0m[49;1H[K[49;1H/[34h[?25hh[?25l[27;38H[7mh[0m[48;120H[1m[7m34
+[0m/h[34h[?25hi[?25l[12;31H[7mhi[0m[27;38Hh[48;117H[1m[7m12,27
+[0m/hi[34h[?25h[?25l[49;3H[K[12;31Hhi[27;38H[7mh[0m[48;117H[1m[7m27,34
+[0m/h[34h[?25h[?25l[49;2H[K[27;38Hh[48;120H[1m[7m1 
+[0m/[34h[?25hH[?25l[1;47r[1;1H[19M[1;49r[29;1H[33m 48 [0m[1m[34m$[0m
+[33m 49 [0m  Scenario: Merged article should have one author (from either of original) # features/merge_articles.feature:26[1m[34m$[0m
+[33m 50 [0m[1m[34m$[0m
+[33m 51 [0m  Scenario: Merged article should have the comments from both the originals # features/merge_articles.feature:28[1m[34m$[0m
+[33m 52 [0m[1m[34m$[0m
+[33m 53 [0m  Scenario: Merged article should have on title (from either of original) # features/merge_articles.feature:30[1m[34m$[0m
+[33m 54 [0m[1m[34m$[0m
+[33m 55 [0mFeature: Write Articles[1m[34m$[0m
+[33m 56 [0m  As a blog administrator[1m[34m$[0m
+[33m 57 [0m  In order to share my thoughts with the world[1m[34m$[0m
+[33m 58 [0m  I want to be able to add articles to my blog[1m[34m$[0m
+[33m 59 [0m[1m[34m$[0m
+[33m 60 [0m  Background:[27C # features/write_article.feature:6[1m[34m$[0m
+[33m 61 [0m    Given the blog is set up[12C # features/step_definitions/web_steps.rb:34[1m[34m$[0m
+[33m 62 [0m    And I am logged into the admin panel # features/step_definitions/web_steps.rb:46[1m[34m$[0m
+[33m 63 [0m[1m[34m$[0m
+[33m 64 [0m  Scenario: Successfully write articles[33C # features/write_article.feature:10[1m[34m$[0m
+[33m 65 [0m    Given I am on the new article page[34C # features/step_definitions/web_steps.rb:68[1m[34m$[0m
+[33m 66 [0m      [7mH[0mI[1m[34m$[0m[48;117H[1m[7m66,7[11C44%[0m[49;1H[K[49;1H/H[34h[?25hI[?25l[47;12H[7mI[49;4H[34h[?25h[?25l[0m[47;11HHI[34h[?25h[?25l[1;47r[47;1H
+[1;49r[47;1H[33m 67 [0m      the new article page[1m[34m$[0m[49;1H[K[48;118H[1m[7m7[14C6[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 68 [0m    When I fill in "article_title" with "Foobar"[24C # features/step_definitions/web_steps.rb:86[1m[34m$[0m[48;118H[1m[7m8[14C8[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 69 [0m    And I fill in "article__body_and_extended_editor" with "Lorem Ipsum" # features/step_definitions/web_steps.rb:86[1m[34m$[0m[48;118H[1m[7m9[13C51[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 70 [0m    And I press "Publish"[47C # features/step_definitions/web_steps.rb:78[1m[34m$[0m[48;117H[1m[7m70[14C3[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 71 [0m    Then I should be on the admin content page[26C # features/step_definitions/web_steps.rb:256[1m[34m$[0m[48;118H[1m[7m1[14C5[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 72 [0m    When I go to the home page[42C # features/step_definitions/web_steps.rb:74[1m[34m$[0m[48;118H[1m[7m2[14C8[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 73 [0m    Then I should see "Foobar"[42C # features/step_definitions/web_steps.rb:131[1m[34m$[0m[48;118H[1m[7m3[13C60[47;11H[34h[?25h[?25l[1;47r[0m[47;1H
+[1;49r[47;1H[33m 74 [0m    When I follow "Foobar"[46C # features/step_definitions/web_steps.rb:82[1m[34m$[0m[48;118H[1m[7m4[14C2[47;11H[34h[?25h[?25l[48;118H3[46;11H[34h[?25h[?25l[48;118H2[45;11H[34h[?25h[?25l[48;118H1[44;11H[34h[?25h[?25l[48;118H0[43;11H[34h[?25h[?25l[48;117H69[42;11H[34h[?25h[?25l[48;118H8[41;11H[34h[?25h[?25l[48;118H7[40;11H[34h[?25h[?25l[48;118H6[39;11H[34h[?25h[?25l[48;118H5[38;11H[34h[?25h[?25l[48;118H6[39;11H[34h[?25h[?25l[48;118H7[40;11H[34h[?25h[?25l[49;1H[0m:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[49;1H[K[49;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ l[Kjjjjjjjjjjjjjjjjjjjj[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+Step definitions must always have a proc or symbol (Cucumber::RbSupport::RbStepDefinition::MissingProc)
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_step_definition.rb:27:in `initialize'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_language.rb:114:in `new'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_language.rb:114:in `register_rb_step_definition'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_dsl.rb:27:in `register_rb_step_definition'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_dsl.rb:113:in `register_rb_step_definition'
+/home/ubuntu/typo/features/step_definitions/article_steps.rb:13:in `<top (required)>'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.0.17/lib/active_support/dependencies.rb:236:in `load'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.0.17/lib/active_support/dependencies.rb:236:in `block in load'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.0.17/lib/active_support/dependencies.rb:227:in `load_dependency'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.0.17/lib/active_support/dependencies.rb:236:in `load'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/rb_support/rb_language.rb:129:in `load_code_file'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime/support_code.rb:171:in `load_file'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime/support_code.rb:83:in `block in load_files!'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime/support_code.rb:82:in `each'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime/support_code.rb:82:in `load_files!'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime.rb:175:in `load_step_definitions'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/runtime.rb:40:in `run!'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/cli/main.rb:43:in `execute!'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/lib/cucumber/cli/main.rb:20:in `execute'
+/usr/local/lib/ruby/gems/1.9.1/gems/cucumber-1.2.1/bin/cucumber:14:in `<top (required)>'
+/usr/local/bin/cucumber:19:in `load'
+/usr/local/bin/cucumber:19:in `<main>'
+rake aborted!
+Command failed with status (1): [/usr/local/bin/ruby -S bundle exec cucumbe...]
+
+Tasks: TOP => cucumber => cucumber:ok
+(See full trace by running task with --trace)
+saasbook@saasbook:~/typo$ rake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi outputls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[10Pconsole teste[Krails consolel[Kvi article.rb ls[K[1Pscd models[3Pmodels[4Plscd appl[Kcd ap[3Pls[1Pevi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgrep -r "Excerpts are posts" .[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pevi users/edit.html.erb ls[Kvi shared/destroy.html.erb [18Pls sharedvi shared/destroy.html.erb ls[Kvi users/edit.html.erb e[Klsgrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce[Kls[1Pevi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgrep -r "Excerpts are posts" .[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pevi users/edit.html.erb ls[Kvi shared/destroy.html.erb [18Pls shared[1Pusers[Kcd ..[3Plsvi cd ..ls[Kvi index.html.erb ls[Kvi index.html.erb ls[Kcd content/ls[Kcd admin/ls[Kcd viewsls[Kcd admin/ls[Kcd content/ls[Kvi index.html.erb ls[Kvi index.html.erb ls[Kvi cd ..ls[Kcd ..[3Pls userssharedvi shared/destroy.html.erb ls[Kvi users/edit.html.erb e[Klsgrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce[Klscd apl[Kcd app[4Plsmodelscd modelss[Klsvi article.rb l[Krails consolee[Kconsole testrake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[Cls[Kvi outputls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[KAArake cucumber > outputA[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[C[KAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi outputls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[Cls[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[10Pconsole teste[Krails consolel[K[Kvi article.rb ls[K[1Pscd models[3Pmodels[4Plscd appl[Kcd ap[3Pls[1Pevi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgrep -r "Excerpts are posts" .[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pevi users/edit.html.erb ls[Kvi shared/destroy.html.erb [18Pls shared[1Pusers[Kcd ..[3Plsvi cd ..ls[Kvi index.html.erb ls[Kvi index.html.erb ls[Kcd content/ls[Kcd admin/ls[Kcd viewsls[Kcd app/ls[K[1Pevi _form.html.erb ls[Kcd content/ls[Kcd admin/ls[Kcd views/ls[Kcd app/ls[K[1Pegrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pevi user.rb ls[Kcd modelsls[Kcd app/ls[Kcd typo/ls[Kcdlscd ..[3Plscd CS169ls[Kcd School/ls[Kcd ~/Dropboxls[Kcd School/ls[Kcd CS169ls[Kcd ..[3Plscdlscd typo/ls[Kcd app/ls[Kcd modelsls[Kvi user.rb e[Klsgrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce[Klscd app/ls[Kcd views/ls[Kcd admin/ls[Kcd content/ls[Kvi _form.html.erb e[Klscd app/ls[Kcd viewsls[Kcd admin/ls[Kcd content/ls[Kvi index.html.erb ls[Kvi index.html.erb ls[Kvi cd ..ls[Kcd ..[3Pls userssharedvi shared/destroy.html.erb ls[Kvi users/edit.html.erb e[Klsgrep -r "Excerpts are posts" .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi app/views/admin/content/_form.html.erb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce[Klscd apl[Kcd app[4Plsmodelscd modelss[Klsvi article.rb [Krails consolee[Kconsole testrake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[Cls[Kvi outputls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[C[13@rake cucumber >[C[C[C[C[C[C[C[13Pvi[C[C[C[C[C[C[Cls[Krake cucumber > output[13Pvi[C[C[C[C[C[C[C[Kvi output
+[?1000h[?1049h[?1h=[1;49r[34l[34h[?25h[23m[24m[0m[H[J[?25l[49;1H"output" 1L, 29C[1;1H[33m  1 [0mUsing the default profile...[1m[34m$
+~                                                                                                                                     [3;1H~                                                                                                                                     [4;1H~                                                                                                                                     [5;1H~                                                                                                                                     [6;1H~                                                                                                                                     [7;1H~                                                                                                                                     [8;1H~                                                                                                                                     [9;1H~                                                                                                                                     [10;1H~                                                                                                                                     [11;1H~                                                                                                                                     [12;1H~                                                                                                                                     [13;1H~                                                                                                                                     [14;1H~                                                                                                                                     [15;1H~                                                                                                                                     [16;1H~                                                                                                                                     [17;1H~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [25;1H~                                                                                                                                     [26;1H~                                                                                                                                     [27;1H~                                                                                                                                     [28;1H~                                                                                                                                     [29;1H~                                                                                                                                     [30;1H~                                                                                                                                     [31;1H~                                                                                                                                     [32;1H~                                                                                                                                     [33;1H~                                                                                                                                     [34;1H~                                                                                                                                     [35;1H~                                                                                                                                     [36;1H~                                                                                                                                     [37;1H~                                                                                                                                     [38;1H~                                                                                                                                     [39;1H~                                                                                                                                     [40;1H~                                                                                                                                     [41;1H~                                                                                                                                     [42;1H~                                                                                                                                     [43;1H~                                                                                                                                     [44;1H~                                                                                                                                     [45;1H~                                                                                                                                     [46;1H~                                                                                                                                     [47;1H~                                                                                                                                     [0m[48;1H[1m[7moutput                                                                                                              1,1            All[1;5H[34h[?25h[?25l[0m[49;1H[K[49;1H:[34h[?25hq[?25l[34h[?25h[?25l[?1000l[49;1H[K[49;1H[?1l>[34h[?25h[?1049lsaasbook@saasbook:~/typo$ vi output[Kvi output[13@rake cucumber >[C[C[C[C[C[C[C
+/usr/local/bin/ruby -S bundle exec cucumber  --profile default
+:q
+^C
+Exiting... Interrupt again to exit immediately.
+^Z
+[1]+  Stopped                 rake cucumber > output
+saasbook@saasbook:~/typo$ e
+exit
+There are stopped jobs.
+saasbook@saasbook:~/typo$ e
+exit
+rake aborted!
+SIGTERM
+Script done on Tue 16 Oct 2012 04:22:04 PM PDT
